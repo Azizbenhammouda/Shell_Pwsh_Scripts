@@ -7,3 +7,4 @@ fi
 echo "failed login SSH attempts"
 resultat=$(grep "Failed password" "$LOG_FILE"| grep -oE '([0-9]{1,3}\.){3}[0-9]{1,3}' | sort | uniq -c | sort -rn)
 echo "$resultat" | awk '{printf "%-5s attempts from %s\n", $1, $2}'
+echo "aaaaa"
